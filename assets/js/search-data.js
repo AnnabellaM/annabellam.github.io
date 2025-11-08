@@ -412,16 +412,41 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-my-work-an-extensive-empirical-study-of-nondeterministic-behavior-in-static-analysis-tools-accepted-by-icse-2025",
+          title: 'My work “An Extensive Empirical Study of Nondeterministic Behavior in Static Analysis Tools”...',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-served-as-a-junior-pc-member-for-msr-2025",
+          title: 'Served as a junior PC member for MSR 2025.',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-received-the-acm-sigsoft-caps-travel-award-for-icse-2025",
+          title: 'Received the ACM SIGSOFT CAPS Travel Award for ICSE 2025!',
+          description: "",
+          section: "News",},{id: "news-my-work-program-feature-based-benchmarking-for-fuzz-testing-accepted-by-issta-2025",
+          title: 'My work “Program Feature-based Benchmarking for Fuzz Testing” accepted by ISSTA 2025!',
+          description: "",
+          section: "News",},{id: "news-i-presented-our-work-an-extensive-empirical-study-of-nondeterministic-behavior-in-static-analysis-tools-at-icse-2025-ottawa",
+          title: 'I presented our work “An Extensive Empirical Study of Nondeterministic Behavior in Static...',
+          description: "",
+          section: "News",},{id: "news-received-the-mary-and-richard-templeton-graduate-fellowship-for-2025-2026",
+          title: 'Received the Mary and Richard Templeton Graduate Fellowship for 2025-2026!',
+          description: "",
+          section: "News",},{id: "news-served-on-artifact-evaluation-committee-for-pldi-2025",
+          title: 'Served on artifact evaluation committee for PLDI 2025.',
+          description: "",
+          section: "News",},{id: "news-my-work-program-feature-based-fuzzing-benchmarking-won-the-1st-place-in-icse-2025-acm-student-research-competition",
+          title: 'My work “Program Feature-based Fuzzing Benchmarking” won the 1st place in ICSE 2025...',
+          description: "",
+          section: "News",},{id: "news-our-paper-visualization-task-taxonomy-to-understand-the-fuzzing-internals-accepted-by-tosem-2025",
+          title: 'Our paper “Visualization Task Taxonomy to Understand the Fuzzing Internals” accepted by TOSEM...',
+          description: "",
+          section: "News",},{id: "news-served-on-artifact-evaluation-committee-for-issta-2025",
+          title: 'Served on artifact evaluation committee for ISSTA 2025.',
+          description: "",
+          section: "News",},{id: "news-thrill-to-share-that-ut-dallas-news-featured-my-first-place-win-at-the-icse-2025-acm-student-research-competition-link",
+          title: 'Thrill to share that UT Dallas News featured my first-place win at the...',
+          description: "",
+          section: "News",},{id: "news-served-as-a-shadow-pc-member-for-icse-2026",
+          title: 'Served as a shadow PC member for ICSE 2026.',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
@@ -509,13 +534,6 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://scholar.google.com/citations?user=3o_8WtUAAAAJ", "_blank");
-        },
-      },{
-        id: 'social-custom_social',
-        title: 'Custom_social',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://www.alberteinstein.com/", "_blank");
         },
       },{
       id: 'light-theme',
