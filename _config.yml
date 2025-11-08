@@ -188,6 +188,8 @@ exclude:
   - package.json
   - package-lock.json
   - _pages/about_einstein.md
+  - _pages/dropdown.md
+  - _pages/people.md
   - purgecss.config.js
   - README.md
   - readme_preview/
@@ -264,8 +266,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Miao]
+  first_name: [Miao]
 
   style: apa
   locale: en
