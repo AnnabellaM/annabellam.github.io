@@ -2,154 +2,96 @@
   type: map
   contents:
     - name: Full Name
-      value: Miao Miao
-    - name: Email
-      value: mmiao@utdallas.edu
-    - name: Location
-      value: Dallas, TX
-    - name: Website
-      value: annabellam.github.io
-    - name: GitHub
-      value: annabellamiao
-    - name: LinkedIn
-      value: AnnabellaM
-
-- title: Research Interests
-  type: list
-  contents:
-    - My research interest lies in program analysis and fuzz testing with the goal of enhancing the tools' reliability and improving the explainability of their evaluation. One line of my work is to enhance the static analysis tools by automatically detecting nondeterministic bugs and diagnosing their root causes, as well as understanding the common challenges tool developers are facing through repository mining. Another line of my work is to improve methodologies for evaluating and introspecting fuzzers by developing new benchmarks and an interactive visualization framework for fuzzing, as well as a new automated introspection framework for fuzzers, to provide a more comprehensive and accurate assessment of fuzzing tools, and eventually enable researchers and practitioners to better understand how and why their fuzzers work or fail to work.
+      value: Albert Einstein
+    - name: Date of Birth
+      value: 14th March 1879
+    - name: Languages
+      value: English, German
 
 - title: Education
   type: time_table
   contents:
-    - title: Doctor of Philosophy, Software Engineering
-      institution: The University of Texas at Dallas, Richardson, Texas, USA
-      year: Jan 2023 - present
+    - title: PhD
+      institution: University of Zurich, Zurich, Switzerland
+      year: 1905
       description:
-        - Advisor: Dr. Shiyi Wei
-        - GPA: 3.97
-    - title: Master of Science, Software Engineering
-      institution: The University of Texas at Dallas, Richardson, Texas, USA
-      year: Aug 2021 - Dec 2022
+        - Description 1.
+        - Description 2.
+        - title: Description 3.
+          contents:
+            - Sub-description 1.
+            - Sub-description 2.
+    - title: Federal teaching diploma
+      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
+      year: 1900
       description:
-        - GPA: 3.97
-    - title: Bachelor of Engineering, Computer Science and Technology
-      institution: The Xi'an University of Finance and Economics, Xi'an, China
-      year: Sep 2014 - June 2018
-      description:
-        - GPA: 3.59
+        - Description 1.
+        - Description 2.
 
-- title: Publications
-  type: list
-  contents:
-    - <strong>Program Feature-based Benchmarking for Fuzz Testing</strong><br>Miao Miao, Sriteja Kummita, Eric Bodden, and Shiyi Wei.<br>In the 34th ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA), 2025.
-    - <strong>An Extensive Empirical Study of Nondeterministic Behavior in Static Analysis Tools</strong><br>Miao Miao, Austin Mordahl, Dakota Soles, Alice Beideck, and Shiyi Wei.<br>In the 47th IEEE/ACM International Conference on Software Engineering (ICSE), 2025.
-    - <strong>Visualization Task Taxonomy to Understand the Fuzzing Internals</strong><br>Kummita Sriteja, Miao Miao, Bodden Eric, and Shiyi Wei.<br>ACM Transactions on Software Engineering and Methodology Journal (TOSEM), 2025.
-    - <strong>Program Feature-based Fuzzing Benchmarking</strong><br>Miao Miao.<br>In the 47th IEEE/ACM International Conference on Software Engineering, ACM Student Research Competition (ICSE-SRC), 2025.
-    - <strong>Visualization Task Taxonomy to Understand the Fuzzing Internals (Registered Report)</strong><br>Kummita Sriteja, Miao Miao, Bodden Eric, and Shiyi Wei.<br>In the Proceedings of the 3rd ACM International Fuzzing Workshop (FUZZING), 2024.
-    - <strong>ECSTATIC: Automatic Configuration-Aware Testing and Debugging of Static Analysis Tools</strong><br>Austin Mordahl, Dakota Soles, Miao Miao, Zenong Zhang, and Shiyi Wei.<br>In the 32nd ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA), Tool Demonstration Track, 2023.
-
-- title: Research Experience
+- title: Experience
   type: time_table
   contents:
-    - title: Fuzzing Bottleneck Localization
-      institution: The University of Texas at Dallas
-      year: Jan 2025 – Present
+    - title: Professor of Theoretical Physics
+      institution: Institute for Advanced Study, Princeton University
+      year: 1933 - 1955
       description:
-        - Identify fuzzing bottlenecks through metrics that consider a variety of critical information during a fuzzing campaign (e.g., frequency of branch coverage, the length of time the bottlenecks exist).
-        - Analyze the characteristics of the bottlenecks through inter-procedural control flow (iCFG) and data flow analyses (taint tracking).
-        - Evaluate each bottleneck by resolving its constraints, adding resolution seeds to the seed queue, and measuring coverage.
-    - title: Mining Repositories to Understand User and Developer Challenges with Static Analysis Tools
-      institution: The University of Texas at Dallas
-      year: May 2025 – Present
+        - Description 1.
+        - Description 2.
+        - title: Description 3.
+          contents:
+            - Sub-description 1.
+            - Sub-description 2.
+    - title: Visiting Professor
+      institution: California Institute of Technology, Pasadena, California, US
+      year: 1933
       description:
-        - Mine GitHub issues across 18 static-analysis tools to extract 63 topics grouped into 8 categories using topic modeling and manual refinement.
-        - Perform in-depth analysis of the 12 top-ranked topics based on their common patterns and fix strategies.
-        - Train a domain-tuned LLM QA agent to triage static-analysis issues and propose evidence-backed fixes over tool docs and prior resolutions.
-    - title: Program Feature-based Benchmarking for Fuzz Testing
-      institution: The University of Texas at Dallas
-      year: May 2024 – Nov 2024
-      description:
-        - Performed a literature review of 25 recent grey-box fuzzing papers to extract fine-grained program features from their claimed improvements.
-        - Created the first feature-based benchmark that defines 10 configurable parameters for the extracted program features with 153 generated programs.
-        - Evaluated 11 popular fuzzers to understand fuzzer behaviors and the impact of each program parameter on their performance.
-    - title: Visualization Task Taxonomy to Understand the Fuzzing Internals
-      institution: The University of Texas at Dallas
-      year: May 2024 – Nov 2024
-      description:
-        - Conducted semi-structured interviews with fuzzing experts.
-        - Systematically extracted the task taxonomy from the interview data through qualitative data analysis.
-        - Evaluated the support of existing visualization tools for fuzzing through the lens of our taxonomy.
-    - title: An Extensive Empirical Study of Nondeterministic Behavior in Static Analysis Tools
-      institution: The University of Texas at Dallas
-      year: June 2023 – Aug 2024
-      description:
-        - Performed qualitative analysis of the repositories of 11 popular static analysis tools that shows common nondeterministic issues and categorizes their root causes.
-        - Constructed an experiment framework and conducted empirical study that detects previously unknown nondeterministic behaviors in tools such as SOOT, WALA, DOOP, FlowDroid, PyCG and Infer.
-        - Debugged root causes of discovered nondeterministic bugs and reported them to tool developers.
+        - Description 1.
+        - Description 2.
 
-- title: Industry Experience
+    - title: Director
+      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
+      year: 1917-1933
+
+    - title: Professor of Theoretical Physics
+      institution: Karl-Ferdinand University, Prague, Czechoslovakia
+      year: 1911 - 1917
+      description:
+
+    - title: Associate Professor of Theoretical Physics
+      institution: University of Zurich, Zurich, Switzerland
+      year: 1909 - 1911
+
+- title: Open Source Projects
   type: time_table
   contents:
-    - title: iOS Engineering Intern
-      institution: Tinder Inc.
-      year: May 2022 – Aug 2022
-      description:
-        - Developed iOS localization tooling that automated multi-locale releases and improved translation efficiency.
-    - title: iOS Developer
-      institution: LotusFlare Inc.
-      year: Aug 2019 – June 2021
-      description:
-        - Contributed to the development and maintenance of two production mobile apps (mWell PH, myIM3).
-    - title: Software Engineer
-      institution: KA Software
-      year: Apr 2018 – Apr 2019
-      description:
-        - Implemented EDI solutions (X12/EDIFACT) and AS2/SFTP integrations to automate B2B transactions.
+    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
+      year: 2015-now
+      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
 
-- title: Teaching Experience
+- title: Honors and Awards
   type: time_table
   contents:
-    - title: Teaching Assistant
-      institution: The University of Texas at Dallas
-      year: Spring 2023 - Spring 2024
-      description:
-        - CS/SE 6356: Software Maintenance Evolution and Re-Engineering (Spring 2023)
-        - CS 4386: Compiler Design (Fall 2023)
-        - CS 6353: Compiler Construction (Spring 2024)
-        - Contributed to curriculum development and design of projects and assignments
-        - Provided video and in-class tutorials to guide students through project implementation
-
-- title: Awards
-  type: time_table
-  contents:
-    - year: 2025
+    - year: 1921
       items:
-        - Winner of ICSE 2025 ACM student research competition (1st place)
-        - Mary and Richard Templeton Graduate Fellowship
-        - The ACM SIGSOFT CAPS Travel Award for ICSE 2025
-    - year: 2024
+        - Nobel Prize in Physics
+        - Matteucci Medal
+    - year: 2029
       items:
-        - The Jonsson School Best Teaching Assistant Award
+        - Max Planck Medal
 
-- title: Services
+- title: Academic Interests
   type: nested_list
   contents:
-    - title: Program Committee
+    - title: Topic 1.
       items:
-        - Shadow Program Committee member: the 48th IEEE/ACM International Conference on Software Engineering (ICSE 2026)
-        - Junior Program Committee member: the 22nd International Conference on Mining Software Repositories (MSR 2025)
-    - title: Artifact Evaluation Committee
+        - Description 1.
+        - Description 2.
+    - title: Topic 2.
       items:
-        - The 34th ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA 2025)
-        - The 46th ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI 2025)
-    - title: Mentoring
-      items:
-        - Mentored four high school students and three undergraduate students in the UTD K-12 Summer Research Program and Clarks Summer Research Program (Summer 2023, Summer 2024, Summer 2025)
-    - title: Student Volunteer
-      items:
-        - The 47th IEEE/ACM International Conference on Software Engineering (ICSE 2025)
-        - The 32nd ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA 2023)
-    - title: Sub-reviewer
-      items:
-        - CCS2025, USENIX2025, ISSTA2025, ICSE2025, FSE2025, USENIX2024, MSR2025, ISSTA2024, ICSE2024, FSE2024, ASE2024, FSE 2023, ISSTA 2023, SecDev 2023, ICSE 2023
+        - Description 1.
+        - Description 2.
+
+- title: Other Interests
+  type: list
+  contents:
+    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
