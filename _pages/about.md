@@ -28,9 +28,3 @@ I am a third-year Ph.D. student at The University of Texas at Dallas. My faculty
 <!-- Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically. -->
 
 <!-- Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
-
----
-
-## Visitor Map
-
-<a href='https://clustrmaps.com/site/1c6r0'  title='Visit tracker'><img src='//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=tt&d=0ONazfl96urUveZPvkEdlAcvMKp9V8hrtJpRW5tzFbc'/></a>
