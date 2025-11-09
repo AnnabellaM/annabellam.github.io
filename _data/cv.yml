@@ -1,97 +1,60 @@
-- title: General Information
-  type: map
-  contents:
-    - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
-
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Ph.D. in Software Engineering
+      institution: UT Dallas
+      year: 2023 – present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - GPA: 3.97
+    - title: M.S. in Software Engineering
+      institution: UT Dallas
+      year: 2021 – 2022
       description:
-        - Description 1.
-        - Description 2.
+        - GPA: 3.97
+    - title: B.S. in Computer Science
+      institution: Xi'an Univ. of Finance and Economics
+      year: 2014–2018
+      description:
+        - GPA: 3.59
 
-- title: Experience
+- title: Industry Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
+    - title: iOS Engineering Intern
+      institution: Tinder Inc.
+      year: Summer 2022
+    - title: iOS Developer
+      institution: LotusFlare Inc.
+      year: 2019–2021
+    - title: Junior Software Engineer
+      institution: KA Software
+      year: 2018–2019
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
+- title: Service
+  type: list
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - Shadow PC: ICSE 2026
+    - Artifact Evaluation PC: ISSTA 2025, PLDI 2025
+    - Junior PC: MSR 2025
+    - Mentor: UTD K-12 & Clarks Summer Research Programs (2023–2025)
+    - Student Volunteer: ICSE 2025, ISSTA 2023
+    - Sub-reviewer: CCS, USENIX, FSE, ISSTA, ICSE, ASE, SecDev (2023–2026)
+
+- title: Teaching
+  type: list
+  contents:
+    - CS/SE 6356: Software Maintenance and Re-Engineering (Spring 2023)
+    - CS 4386: Compiler Design (Fall 2023)
+    - CS 6353: Compiler Construction (Spring 2024)
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2025
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
+        - 1st Place – ICSE 2025 ACM Student Research Competition
+        - Mary and Richard Templeton Graduate Fellowship (2025)
+        - ACM SIGSOFT CAPS Travel Award – ICSE 2025
+    - year: 2024
       items:
-        - Max Planck Medal
-
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+        - Jonsson School Best Teaching Assistant Award (2024)
