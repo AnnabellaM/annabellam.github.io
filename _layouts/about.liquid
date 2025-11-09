@@ -74,10 +74,12 @@ layout: default
     {% endif %}
 
     <!-- Visitor Map -->
-    <div class="visitor-map mt-4">
-      <h2>Visitor Map</h2>
-      <a href='https://clustrmaps.com/site/1c6r0' title='Visit tracker'><img src='//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=tt&d=0ONazfl96urUveZPvkEdlAcvMKp9V8hrtJpRW5tzFbc'/></a>
+    <div style="text-align: center; margin-top: 2rem;">
+      <div style="width: 200px; height: 150px; margin: 0 auto; overflow: hidden;;">
+        <a href='https://clustrmaps.com/site/1c6r0' title='Visit tracker'><img src='//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=tt&d=0ONazfl96urUveZPvkEdlAcvMKp9V8hrtJpRW5tzFbc'/></a>
+      </div>
     </div>
+    
 
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
       {% include newsletter.liquid center=true %}
