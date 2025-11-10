@@ -29,7 +29,7 @@
       "area": "Computer Science",
       "studyType": "B.S.",
       "startDate": "2014-09-01",
-      "endDate": "2018-6-30",
+      "endDate": "2018-06-30",
       "score": "3.59",
       "courses": []
     }
@@ -49,7 +49,7 @@
       "position": "iOS Developer",
       "url": "https://www.lotusflare.com/",
       "startDate": "2019-08-01",
-      "endDate": "2021-6-30",
+      "endDate": "2021-06-30",
       "summary": "",
       "highlights": []
     },
@@ -58,7 +58,7 @@
       "position": "Junior Software Engineer",
       "url": "",
       "startDate": "2018-04-01",
-      "endDate": "2019-4-31",
+      "endDate": "2019-04-30",
       "summary": "",
       "highlights": []
     }
@@ -133,7 +133,6 @@
   "awards": [
     {
       "title": "1st Place – ICSE 2025 ACM Student Research Competition",
-      "date": "2025-01-01",
       "awarder": "ACM",
       "url": "",
       "summary": ""
