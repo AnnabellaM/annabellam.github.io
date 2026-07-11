@@ -116,6 +116,10 @@ layout: default
       </section>
     {% endif %}
 
+    {% if site.contact_note %}
+      <div class="contact-note">{{ site.contact_note }}</div>
+    {% endif %}
+
     <!-- Visitor globe (UmamiMaps) — renders only when the endpoint is configured -->
     {% if site.visitor_globe_endpoint %}
       <div class="visitor-map mt-4" style="text-align: center;">

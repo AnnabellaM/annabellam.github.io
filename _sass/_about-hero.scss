@@ -151,6 +151,14 @@ section[id] {
     margin-bottom: 3rem;
   }
 
+  .contact-note {
+    margin-top: 3rem;
+    text-align: center;
+    font-family: $lora-serif;
+    font-style: italic;
+    color: var(--global-text-color-light);
+  }
+
   .section-heading {
     text-align: left;
     font-family: $lora-serif;
