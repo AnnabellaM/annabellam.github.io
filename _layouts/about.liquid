@@ -121,12 +121,28 @@ layout: default
       <div class="visitor-map mt-4" style="text-align: center;">
         <div id="visitor-globe" style="display: inline-block;"></div>
       </div>
-      <script
-        src="https://unpkg.com/umami-maps/dist/embed.global.js"
-        data-endpoint="{{ site.visitor_globe_endpoint }}"
-        data-target="#visitor-globe"
-        data-size="250"
-      ></script>
+      {% comment %}
+        data-target points at a non-existent element on purpose: it disables the
+        script's auto-render so we can call renderUmamiGlobe ourselves with
+        custom colors (the data-attribute API does not support colors).
+      {% endcomment %}
+      <script src="https://unpkg.com/umami-maps/dist/embed.global.js" data-target="#umami-maps-manual-init"></script>
+      <script>
+        (function () {
+          var el = document.getElementById('visitor-globe');
+          if (!el || !window.UmamiMaps) return;
+          var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+          // Light mode matches the navbar green (#e8f5e9); dark mode matches #2d3e2d.
+          UmamiMaps.renderUmamiGlobe(el, {
+            endpoint: '{{ site.visitor_globe_endpoint }}',
+            size: 180,
+            dark: dark,
+            baseColor: dark ? [0.18, 0.24, 0.18] : [0.91, 0.96, 0.91],
+            glowColor: dark ? [0.18, 0.24, 0.18] : [0.91, 0.96, 0.91],
+            markerColor: [0.3, 0.69, 0.31]
+          });
+        })();
+      </script>
     {% endif %}
 
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
