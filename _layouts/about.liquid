@@ -1,83 +1,133 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
+<div class="about">
+  <!-- Hero: avatar + identity + links (left), bio (right) -->
+  <section class="about-hero" id="about">
+    <div class="about-hero-inner">
+      <div class="row align-items-start">
+        <div class="col-md-4 about-profile text-center">
+          {% if page.profile and page.profile.image %}
+            {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+            {% if page.profile.image_circular %}
+              {% assign profile_image_class = 'img-fluid avatar-img avatar-circular' %}
+            {% else %}
+              {% assign profile_image_class = 'img-fluid avatar-img' %}
+            {% endif %}
+            <div class="avatar-wrapper">
+              {%
+                include figure.liquid loading="eager" path=profile_image_path class=profile_image_class alt=page.profile.image
+                cache_bust=true
+              %}
+            </div>
+          {% endif %}
+
+          <h1 class="about-name">
+            {% if page.profile.name %}
+              {{ page.profile.name }}
+            {% elsif site.title == 'blank' %}
+              {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}
+            {% else %}
+              {{ site.title }}
+            {% endif %}
+          </h1>
+
+          {% if page.profile.position %}
+            <p class="about-position">{{ page.profile.position }}</p>
+          {% endif %}
+
+          {% if page.profile.affiliations %}
+            {% for affiliation in page.profile.affiliations %}
+              <p class="about-affiliation">
+                {% if affiliation.url %}
+                  <a href="{{ affiliation.url }}" target="_blank" rel="noopener">{{ affiliation.name }}</a>
+                {% else %}
+                  {{ affiliation.name }}
+                {% endif %}
+              </p>
+            {% endfor %}
+          {% endif %}
+
+          {% if page.profile.more_info %}
+            <div class="more-info">{{ page.profile.more_info }}</div>
+          {% endif %}
+
+          {% if page.social %}
+            <div class="about-social">{% include social.liquid %}</div>
+          {% endif %}
+        </div>
+
+        <div class="col-md-8 about-bio">{{ content }}</div>
+      </div>
+    </div>
+  </section>
 
   <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
-          {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
-      </div>
-    {% endif %}
-
-    <div class="clearfix">{{ content }}</div>
-
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
-      {% include news.liquid limit=true %}
+      <section class="about-section" id="news">
+        <h2 class="section-heading">News</h2>
+        {% include news.liquid limit=true %}
+      </section>
     {% endif %}
 
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
+      <section class="about-section">
+        <h2 class="section-heading">
+          <a href="{{ '/blog/' | relative_url }}">Latest Posts</a>
+        </h2>
+        {% include latest_posts.liquid %}
+      </section>
     {% endif %}
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
+      <section class="about-section" id="publications">
+        <h2 class="section-heading">Publications</h2>
+        <div class="publications">
+          {% bibliography --group_by none %}
+        </div>
+      </section>
     {% endif %}
 
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
+    <!-- Teaching / Services / Awards: content sourced from their _pages files -->
+    {% assign teaching_page = site.pages | where: 'permalink', '/teaching/' | first %}
+    {% if teaching_page %}
+      <section class="about-section" id="teaching">
+        <h2 class="section-heading">Teaching</h2>
+        {{ teaching_page.content | markdownify }}
+      </section>
+    {% endif %}
 
-        <div class="contact-note">{{ site.contact_note }}</div>
+    {% assign services_page = site.pages | where: 'permalink', '/service/' | first %}
+    {% if services_page %}
+      <section class="about-section" id="services">
+        <h2 class="section-heading">Services</h2>
+        {{ services_page.content | markdownify }}
+      </section>
+    {% endif %}
+
+    {% assign awards_page = site.pages | where: 'permalink', '/awards/' | first %}
+    {% if awards_page %}
+      <section class="about-section" id="awards">
+        <h2 class="section-heading">Awards</h2>
+        {{ awards_page.content | markdownify }}
+      </section>
+    {% endif %}
+
+    <!-- Visitor globe (UmamiMaps) — renders only when the endpoint is configured -->
+    {% if site.visitor_globe_endpoint %}
+      <div class="visitor-map mt-4" style="text-align: center;">
+        <div id="visitor-globe" style="display: inline-block;"></div>
       </div>
+      <script
+        src="https://unpkg.com/umami-maps/dist/embed.global.js"
+        data-endpoint="{{ site.visitor_globe_endpoint }}"
+        data-target="#visitor-globe"
+        data-size="250"
+      ></script>
     {% endif %}
-
-    <!-- Visitor Map -->
-    <div class="visitor-map mt-4" style="text-align: center;">
-      <a href='https://clustrmaps.com/site/1c6r0' title='Visit tracker'><img src='//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=tt&d=0ONazfl96urUveZPvkEdlAcvMKp9V8hrtJpRW5tzFbc'/></a>
-    </div>
-    
 
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
       {% include newsletter.liquid center=true %}

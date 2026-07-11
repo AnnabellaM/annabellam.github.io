@@ -30,6 +30,21 @@
   type="text/css"
   href="{{ site.third_party_libraries.google_fonts.url.fonts }}"
 >
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+>
+
+<!-- Umami analytics (enabled when site.umami.website_id is set) -->
+{% if site.umami and site.umami.website_id %}
+  <script
+    defer
+    src="{{ site.umami.script_url | default: 'https://cloud.umami.is/script.js' }}"
+    data-website-id="{{ site.umami.website_id }}"
+    data-domains="annabellam.github.io"
+  ></script>
+{% endif %}
 
 <!-- Code Syntax Highlighting -->
 <link

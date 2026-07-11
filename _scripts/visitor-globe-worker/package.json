@@ -1,0 +1,11 @@
+{
+  "name": "visitor-globe-worker",
+  "private": true,
+  "description": "Cloudflare Worker proxying Umami data for the UmamiMaps visitor globe",
+  "dependencies": {
+    "umami-maps": "^0.1.0"
+  },
+  "devDependencies": {
+    "wrangler": "^3"
+  }
+}
