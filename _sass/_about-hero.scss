@@ -22,14 +22,23 @@ section[id] {
   }
 
   // Align the tabs with the left edge of the centered content column, like the
-  // reference site. On narrower windows, max() keeps them clear of the name;
-  // below 992px they flow next to the brand as before.
+  // reference site. Plain calc()/fixed values only — max() inside calc was
+  // mangled by the production CSS pipeline. On mid-size windows the tabs sit
+  // at a fixed offset clear of the name; below 992px they flow next to it.
   @media (min-width: 992px) {
     .navbar-collapse > .navbar-nav:first-child {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      left: max(calc(50% - #{$max-content-width} / 2 + 15px), 330px);
+      left: 330px;
+    }
+  }
+
+  // Once the window is wide enough that the content edge clears the name,
+  // pin the tabs to the content column's left edge: (100% - 1170px) / 2 + 15px.
+  @media (min-width: 1830px) {
+    .navbar-collapse > .navbar-nav:first-child {
+      left: calc(50% - #{$max-content-width} / 2 + 15px);
     }
   }
 }

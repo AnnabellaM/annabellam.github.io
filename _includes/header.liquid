@@ -36,15 +36,10 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
-        <!-- Single-page anchor tabs -->
+        <!-- Single-page anchor tabs; the active tab is set by the scrollspy script below -->
         <ul class="navbar-nav mr-auto flex-nowrap">
-          <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/#about' | relative_url }}">
-              About
-              {% if page.permalink == '/' %}
-                <span class="sr-only">(current)</span>
-              {% endif %}
-            </a>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ '/#about' | relative_url }}">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ '/#publications' | relative_url }}">Publications</a>
@@ -90,4 +85,34 @@
       </div>
     </progress>
   {% endif %}
+
+  <!-- Scrollspy: highlight the tab of the section currently in view -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var items = Array.prototype.slice.call(document.querySelectorAll('#navbarNav .navbar-nav li.nav-item'));
+      var pairs = [];
+      items.forEach(function (li) {
+        var link = li.querySelector('a.nav-link');
+        var hash = link && (link.getAttribute('href') || '').split('#')[1];
+        var section = hash && document.getElementById(hash);
+        if (section) pairs.push({ li: li, section: section });
+      });
+      if (!pairs.length) return; // sections only exist on the single-page home
+      function onScroll() {
+        var pos = window.scrollY + 120; // fixed navbar height + breathing room
+        var current = pairs[0];
+        pairs.forEach(function (p) {
+          if (p.section.offsetTop <= pos) current = p;
+        });
+        if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 2) {
+          current = pairs[pairs.length - 1];
+        }
+        items.forEach(function (li) {
+          li.classList.toggle('active', li === current.li);
+        });
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    });
+  </script>
 </header>
