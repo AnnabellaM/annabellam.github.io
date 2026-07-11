@@ -4,6 +4,8 @@
  * so light/dark mode and the site palette are preserved.
  ******************************************************************************/
 
+$lora-serif: "Lora", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
 // Anchored sections scroll to rest below the fixed navbar, smoothly.
 html {
   scroll-behavior: smooth;
@@ -15,7 +17,7 @@ section[id] {
 
 .navbar {
   background-color: var(--global-navbar-bg-color);
-  font-family: "Lora", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: $lora-serif;
 
   .navbar-nav .nav-item.active .nav-link {
     font-weight: 700;
@@ -46,6 +48,7 @@ section[id] {
 .about {
   .about-hero {
     margin-bottom: 2rem;
+    font-family: $lora-serif;
 
     .about-hero-inner {
       max-width: $max-content-width;
@@ -150,6 +153,7 @@ section[id] {
 
   .section-heading {
     text-align: left;
+    font-family: $lora-serif;
     font-size: 1.5rem;
     font-weight: 700;
     margin: 2.5rem 0 1rem;
