@@ -86,7 +86,11 @@
     </progress>
   {% endif %}
 
-  <!-- Scrollspy: highlight the tab of the section currently in view -->
+  <!-- Scrollspy: highlight the tab of the section currently in view.
+       Clicking a tab locks the highlight on it (short bottom sections like
+       Services can't reach the top of the viewport, so pure position-based
+       spying would hand the highlight to the last tab); any manual scroll
+       (wheel/touch/keyboard) unlocks and resumes the spy. -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var items = Array.prototype.slice.call(document.querySelectorAll('#navbarNav .navbar-nav li.nav-item'));
@@ -95,10 +99,16 @@
         var link = li.querySelector('a.nav-link');
         var hash = link && (link.getAttribute('href') || '').split('#')[1];
         var section = hash && document.getElementById(hash);
-        if (section) pairs.push({ li: li, section: section });
+        if (section) pairs.push({ li: li, link: link, section: section });
       });
       if (!pairs.length) return; // sections only exist on the single-page home
-      function onScroll() {
+      var locked = false;
+      function setActive(li) {
+        items.forEach(function (x) {
+          x.classList.toggle('active', x === li);
+        });
+      }
+      function spy() {
         var pos = window.scrollY + 120; // fixed navbar height + breathing room
         var current = pairs[0];
         pairs.forEach(function (p) {
@@ -107,12 +117,38 @@
         if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 2) {
           current = pairs[pairs.length - 1];
         }
-        items.forEach(function (li) {
-          li.classList.toggle('active', li === current.li);
-        });
+        setActive(current.li);
       }
-      window.addEventListener('scroll', onScroll, { passive: true });
-      onScroll();
+      function unlock() {
+        locked = false;
+      }
+      pairs.forEach(function (p) {
+        p.link.addEventListener('click', function () {
+          locked = true;
+          setActive(p.li);
+        });
+      });
+      ['wheel', 'touchmove', 'keydown'].forEach(function (ev) {
+        window.addEventListener(ev, unlock, { passive: true });
+      });
+      window.addEventListener(
+        'scroll',
+        function () {
+          if (!locked) spy();
+        },
+        { passive: true }
+      );
+      // initial state: respect a #hash in the URL, else run the spy
+      var initial = null;
+      pairs.forEach(function (p) {
+        if ('#' + p.section.id === location.hash) initial = p;
+      });
+      if (initial) {
+        locked = true;
+        setActive(initial.li);
+      } else {
+        spy();
+      }
     });
   </script>
 </header>
