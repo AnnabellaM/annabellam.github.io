@@ -1,0 +1,176 @@
+/*******************************************************************************
+ * About page hero layout (avatar + identity + bio), news, and
+ * selected-publications sections. Colors come from the global theme variables
+ * so light/dark mode and the site palette are preserved.
+ ******************************************************************************/
+
+// Anchored sections scroll to rest below the fixed navbar, smoothly.
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+.navbar {
+  background-color: var(--global-navbar-bg-color);
+  font-family: "Lora", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  .navbar-nav .nav-item.active .nav-link {
+    font-weight: 700;
+  }
+
+  // Align the tabs with the left edge of the centered content column, like the
+  // reference site. On narrower windows, max() keeps them clear of the name;
+  // below 992px they flow next to the brand as before.
+  @media (min-width: 992px) {
+    .navbar-collapse > .navbar-nav:first-child {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: max(calc(50% - #{$max-content-width} / 2 + 15px), 330px);
+    }
+  }
+}
+
+.about {
+  .about-hero {
+    margin-bottom: 2rem;
+
+    .about-hero-inner {
+      max-width: $max-content-width;
+      margin: 0 auto;
+    }
+  }
+
+  .about-profile {
+    .avatar-wrapper {
+      margin-bottom: 1.25rem;
+
+      figure {
+        margin: 0;
+      }
+
+      .avatar-img {
+        width: 200px;
+        height: auto;
+      }
+
+      .avatar-circular {
+        border-radius: 50%;
+      }
+    }
+
+    .about-name {
+      font-size: 2.25rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    .about-position {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--global-theme-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .about-affiliation {
+      font-size: 1.05rem;
+      margin-bottom: 0.15rem;
+
+      a {
+        color: var(--global-text-color);
+
+        &:hover {
+          color: var(--global-theme-color);
+          text-decoration: none;
+        }
+      }
+    }
+
+    .about-social {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-color: var(--global-card-bg-color);
+        border: 1px solid var(--global-divider-color);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+        color: var(--global-text-color-light);
+        font-size: 1.3rem;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s,
+          color 0.3s;
+
+        &:hover {
+          transform: translateY(-4px) scale(1.05);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          color: var(--global-theme-color);
+        }
+
+        i {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+  .about-bio {
+    line-height: 1.7;
+
+    @media (max-width: 767.98px) {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .about-section {
+    margin-bottom: 3rem;
+  }
+
+  .section-heading {
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--global-text-color);
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: var(--global-theme-color);
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// Reference-style flat publication lists: plain bullets, no cards.
+.publications {
+  ol.bibliography {
+    list-style: disc;
+    padding-left: 1.5rem;
+
+    li {
+      margin-bottom: 1rem;
+
+      .pub-entry p {
+        margin-bottom: 0;
+        line-height: 1.6;
+      }
+    }
+  }
+}

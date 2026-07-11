@@ -47,13 +47,22 @@ repo_trophies:
 
 navbar_fixed: true
 footer_fixed: true
-search_enabled: true
+search_enabled: false
 socials_in_search: true
 posts_in_search: true
 bib_search: true
 
+# Umami analytics + UmamiMaps visitor globe
+# 1) Set website_id to enable Umami visitor tracking (required for the globe data).
+# 2) Set visitor_globe_endpoint to your deployed proxy endpoint to show the globe
+#    on the about page (see _scripts/visitor-globe-worker/).
+umami:
+  script_url: https://umamimyweb.vercel.app/script.js # self-hosted Umami on Vercel
+  website_id: 013d0d65-5b0d-4f50-9dcb-678cac201622
+visitor_globe_endpoint: https://visitor-globe.annabellamiao.workers.dev/api/visitor-globe
+
 # Dimensions
-max_width: 930px
+max_width: 1170px
 
 # TODO: add layout settings (single page vs. multi-page)
 
@@ -190,7 +199,6 @@ exclude:
   - _pages/dropdown.md
   - _pages/repositories.md
   - _pages/profiles.md
-  - _pages/teaching.md
   - purgecss.config.js
   - README.md
   - readme_preview/
@@ -288,8 +296,9 @@ scholar:
   details_link: Details
 
   query: "@*"
-  group_by: year
-  group_order: descending
+  sort_by: year
+  order: descending
+  group_by: none
 
 # Display different badges withs stats for your publications
 # Customize badge behavior in _layouts/bib.liquid
