@@ -1,0 +1,11 @@
+name = "visitor-globe"
+main = "worker.js"
+compatibility_date = "2026-07-01"
+
+[vars]
+UMAMI_API_URL = "https://umamimyweb.vercel.app"
+UMAMI_WEBSITE_ID = "013d0d65-5b0d-4f50-9dcb-678cac201622"
+
+# Self-hosted Umami credentials are secrets; set them with:
+#   npx wrangler secret put UMAMI_USERNAME
+#   npx wrangler secret put UMAMI_PASSWORD
