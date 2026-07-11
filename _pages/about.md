@@ -8,7 +8,6 @@ profile:
   align: right
   image: me.jpg
   image_circular: false # crops the image to make it circular
-  position: Ph.D. Student
   affiliations:
     - name: Department of Computer Science
       url: https://cs.utdallas.edu/
@@ -29,11 +28,9 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a third-year Ph.D. student at The University of Texas at Dallas. My faculty supervisor is [Shiyi Wei](https://personal.utdallas.edu/~swei/). 
+I am a fourth-year Ph.D. student at the University of Texas at Dallas, advised by [Dr. Shiyi Wei](https://personal.utdallas.edu/~swei/).
 
-My research interest lies in program analysis and fuzz testing with the goal of enhancing the tools’ reliability and improving the explainability of their evaluation. 
-One line of my work is to enhance the static analysis tools by automatically detecting nondeterministic bugs and diagnosing their root causes, as well as understanding the common challenges tool developers are facing through repository mining. 
-Another line of my work is to improve methodologies for evaluating and introspecting fuzzers by developing new benchmarks and an interactive visualization framework for fuzzing, as well as a new automated introspection framework for fuzzers, to provide a more comprehensive and accurate assessment of fuzzing tools, and eventually enable researchers and practitioners to better understand how and why their fuzzers work or fail to work.
+My research focuses on improving the reliability and explainability of program analysis and fuzz testing tools. One line of my work targets static analysis tools, automatically detecting and diagnosing nondeterministic bugs while using repository mining to understand the common challenges tool developers face. A second line focuses on fuzzing, where I develop new benchmarks and an interactive visualization framework to help researchers and practitioners better understand how and why their fuzzers succeed or fail. The overarching goal of my research is to improve the security and reliability of real-world software through automated analysis and testing.
 
 Download my CV [here](/assets/pdf/resume.pdf){:target="_blank"}.
 
