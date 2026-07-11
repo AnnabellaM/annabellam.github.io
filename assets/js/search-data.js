@@ -4,24 +4,38 @@ const ninja = document.querySelector('ninja-keys');
 // add the home and posts menu items
 ninja.data = [{
     id: "nav-about",
-    title: "about",
+    title: "About",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
     },
   },{id: "nav-publications",
-          title: "publications",
+          title: "Publications",
           description: "publications by categories in reversed chronological order.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-cv",
-          title: "cv",
-          description: "Please download my CV by clicking the top pdf download button.",
+        },{id: "nav-teaching",
+          title: "Teaching",
+          description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/cv/";
+            window.location.href = "/teaching/";
+          },
+        },{id: "nav-services",
+          title: "Services",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/service/";
+          },
+        },{id: "nav-awards",
+          title: "Awards",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/awards/";
           },
         },{id: "post-a-post-with-plotly-js",
         
@@ -403,14 +417,14 @@ ninja.data = [{
           section: "News",},{id: "news-my-work-program-feature-based-benchmarking-for-fuzz-testing-accepted-by-issta-2025",
           title: 'My work “Program Feature-based Benchmarking for Fuzz Testing” accepted by ISSTA 2025!',
           description: "",
-          section: "News",},{id: "news-i-presented-our-work-an-extensive-empirical-study-of-nondeterministic-behavior-in-static-analysis-tools-at-icse-2025-ottawa",
-          title: 'I presented our work “An Extensive Empirical Study of Nondeterministic Behavior in Static...',
-          description: "",
           section: "News",},{id: "news-received-the-mary-and-richard-templeton-graduate-fellowship-for-2025-2026",
           title: 'Received the Mary and Richard Templeton Graduate Fellowship for 2025-2026!',
           description: "",
           section: "News",},{id: "news-served-on-artifact-evaluation-committee-for-pldi-2025",
           title: 'Served on artifact evaluation committee for PLDI 2025.',
+          description: "",
+          section: "News",},{id: "news-i-presented-our-work-an-extensive-empirical-study-of-nondeterministic-behavior-in-static-analysis-tools-at-icse-2025-ottawa",
+          title: 'I presented our work “An Extensive Empirical Study of Nondeterministic Behavior in Static...',
           description: "",
           section: "News",},{id: "news-my-work-program-feature-based-fuzzing-benchmarking-won-the-1st-place-in-icse-2025-acm-student-research-competition",
           title: 'My work “Program Feature-based Fuzzing Benchmarking” won the 1st place in ICSE 2025...',
@@ -426,6 +440,18 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-served-as-a-shadow-pc-member-for-icse-2026",
           title: 'Served as a shadow PC member for ICSE 2026.',
+          description: "",
+          section: "News",},{id: "news-our-paper-seedui-understanding-initial-seeds-in-fuzzing-accepted-by-asew-2025",
+          title: 'Our paper “SeedUI: Understanding Initial Seeds in Fuzzing” accepted by ASEW 2025!',
+          description: "",
+          section: "News",},{id: "news-our-paper-static-analysis-traces-can-help-dynamic-symbolic-execution-a-replication-study-accepted-by-saner-2026",
+          title: 'Our paper “Static Analysis Traces can Help Dynamic Symbolic Execution: a Replication Study”...',
+          description: "",
+          section: "News",},{id: "news-served-on-artifact-evaluation-committee-for-issta-2026",
+          title: 'Served on artifact evaluation committee for ISSTA 2026.',
+          description: "",
+          section: "News",},{id: "news-served-on-artifact-evaluation-committee-for-ase-2026",
+          title: 'Served on artifact evaluation committee for ASE 2026.',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
