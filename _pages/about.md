@@ -30,7 +30,7 @@ latest_posts:
 
 I am a fourth-year Ph.D. student at the University of Texas at Dallas, advised by [Dr. Shiyi Wei](https://personal.utdallas.edu/~swei/).
 
-My research focuses on improving the reliability and explainability of program analysis and fuzz testing tools. One line of my work targets static analysis tools, automatically detecting and diagnosing nondeterministic bugs while using repository mining to understand the common challenges tool developers face. A second line focuses on fuzzing, where I develop new benchmarks and an interactive visualization framework to help researchers and practitioners better understand how and why their fuzzers succeed or fail. The overarching goal of my research is to improve the security and reliability of real-world software through automated analysis and testing.
+My research advances cybersecurity and software engineering through systematic evaluation, explainable analysis, and AI-driven techniques—with a focus on understanding *why* testing and analysis tools succeed or fail. On the fuzzing side, I develop feature-based benchmarks, investigate root causes of coverage bottlenecks, and build interactive visualization frameworks to make fuzzer behavior interpretable. On the static analysis side, I study nondeterministic behavior and use repository mining to understand recurring development challenges. My long-term goal is to build intelligent, adaptive frameworks that diagnose tool limitations and ultimately produce more secure software.
 
 Download my CV [here](/assets/pdf/resume.pdf){:target="_blank"}.
 
